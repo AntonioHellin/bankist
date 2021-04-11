@@ -60,3 +60,26 @@ const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
+
+const displayMovement = function (movements) {
+  // First clean the container
+  containerMovements.innerHTML = '';
+
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const html = `
+      <div class="movements__row">
+        <div class="movements__type movements__type--${type}">${
+      i + 1
+    } ${type}</div>
+        <div class="movements__value">${mov}</div>
+      </div>
+    `;
+    // https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+
+displayMovement(account1.movements);
+console.log();
