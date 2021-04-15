@@ -237,27 +237,65 @@ Test data:
 
 */
 
-const ageDogs1 = [5, 2, 4, 1, 15, 8, 3];
-const ageDogs2 = [16, 6, 10, 5, 6, 1, 4];
+// const ageDogs1 = [5, 2, 4, 1, 15, 8, 3];
+// const ageDogs2 = [16, 6, 10, 5, 6, 1, 4];
 
-const calcAverageHumanAgefunction = function (ages) {
-  const humanAge = ages.map(function (age, i) {
-    if (age <= 2) {
-      return 2 * age;
-    } else {
-      return 16 + age * 4;
-    }
-  });
-  const adultDogs = humanAge.filter(function (age) {
-    return age >= 18;
-  });
-  console.log(humanAge);
-  console.log(adultDogs);
-  const average =
-    adultDogs.reduce((acc, age) => acc + age, 0) / adultDogs.length;
-  return average;
-};
+// const calcAverageHumanAgefunction = function (ages) {
+//   const humanAge = ages.map(function (age, i) {
+//     if (age <= 2) {
+//       return 2 * age;
+//     } else {
+//       return 16 + age * 4;
+//     }
+//   });
+//   const adultDogs = humanAge.filter(function (age) {
+//     return age >= 18;
+//   });
+//   console.log(humanAge);
+//   console.log(adultDogs);
+//   const average =
+//     adultDogs.reduce((acc, age) => acc + age, 0) / adultDogs.length;
+//   return average;
+// };
 
-const avg1 = calcAverageHumanAgefunction(ageDogs1);
-const avg2 = calcAverageHumanAgefunction(ageDogs2);
-console.log(avg1, avg2);
+// const avg1 = calcAverageHumanAgefunction(ageDogs1);
+// const avg2 = calcAverageHumanAgefunction(ageDogs2);
+// console.log(avg1, avg2);
+
+// LESSON 153: CHAINING METHODS
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const euroToUsd = 1.1;
+// const totalDepositsUSD = movements
+//   .filter(mov => mov > 0)
+//   .map((mov, i, arr) => {
+//     // console.log(arr);
+//     return mov * euroToUsd;
+//   })
+//   // .map(mov => mov * euroToUsd)
+//   .reduce((acc, mov) => acc + mov, 0);
+
+// console.log(totalDepositsUSD);
+
+// CHALLENGE 3
+
+/*
+Rewrite the calcAverageHumanAge function in the Challenge 2 using arrow function and chaining.
+Test data:
+§ Data 1: [5, 2, 4, 1, 15, 8, 3]
+§ Data 2: [16, 6, 10, 5, 6, 1, 4]
+*/
+
+// const ageDogs1 = [5, 2, 4, 1, 15, 8, 3];
+// const ageDogs2 = [16, 6, 10, 5, 6, 1, 4];
+
+// const calcAverageHumanAgefunction = ages =>
+//   ages
+//     .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
+//     .filter(age => age >= 18)
+//     .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+
+// const avg1 = calcAverageHumanAgefunction(ageDogs1);
+// const avg2 = calcAverageHumanAgefunction(ageDogs2);
+// console.log(avg1, avg2);
