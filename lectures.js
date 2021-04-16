@@ -154,7 +154,7 @@ FILTER:  to filter element in the original array which satisy a certain conditio
 REDUCE: reduce boils (reduces) all array elements down to one single value (example: adding all elements together). Returns the reduce value.
 */
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const eurToUsd = 1.1;
 
@@ -314,3 +314,91 @@ Differences between find() and filter():
 - filter() return a new array and find() return only one element
 
 */
+
+// LESSON 159: some and every
+
+// console.log(movements);
+
+// // EQUALITY
+// console.log(movements.includes(-130));
+
+// SOME: CONDITION
+// console.log(movements.some(mov => mov === -130));
+
+// const anyDeposits = movements.some(mov => mov > 1500);
+// console.log(anyDeposits);
+
+// EVERY
+
+// console.log(movements.every(mov => mov > 0));
+
+// // Separate callback
+// const deposit = mov => mov > 0;
+// console.log(movements.some(deposit));
+// console.log(movements.every(deposit));
+// console.log(movements.filter(deposit));
+
+// LESSON 160: flat and flatMap
+
+// const arr = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+
+// console.log(arr.flat());
+
+// const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8, 9];
+// console.log(arrDeep.flat(1));
+
+// const accountMovements = accounts.map(acc => acc.movements);
+// console.log(accountMovements);
+
+// const accountMovements = accounts.map(acc => acc.movements);
+
+// // console.log(accountMovements);
+// // const allMovements = accountMovements.flat();
+// // console.log(allMovements);
+// // const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+
+// // flat
+// const overalBalance = accounts
+//   .map(acc => acc.movements)
+//   .flat()
+//   .reduce((acc, mov) => acc + mov, 0);
+
+// console.log(overalBalance);
+
+// // flatMap
+// const overalBalance2 = accounts
+//   // Mix of flat and Map together. Can go only one level deep.
+//   .flatMap(acc => acc.movements)
+//   .reduce((acc, mov) => acc + mov, 0);
+
+// console.log(overalBalance2);
+
+// LESSON 161: Sorting Arrays
+
+// Strings
+// const owners = ['Jonas', 'Zach', 'Adam', 'Mary'];
+// console.log(owners.sort());
+// console.log(owners);
+
+// console.log(movements);
+// // Numbers
+// // Ascending
+// // movements.sort((a, b) => {
+// //   if (a > b) return 1;
+// //   if (b > a) return -1;
+// // });
+// movements.sort((a, b) => a - b);
+
+// console.log(movements);
+// // Descending
+// // movements.sort((a, b) => {
+// //   if (a > b) return -1;
+// //   if (b > a) return 1;
+// // });
+// movements.sort((a, b) => b - a);
+
+// console.log(movements);
