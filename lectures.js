@@ -154,7 +154,7 @@ FILTER:  to filter element in the original array which satisy a certain conditio
 REDUCE: reduce boils (reduces) all array elements down to one single value (example: adding all elements together). Returns the reduce value.
 */
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const eurToUsd = 1.1;
 
@@ -302,10 +302,10 @@ Test data:
 
 // LESSON 155: FIND METHOD
 
-const firstWithdrawal = movements.find(mov => mov < 0);
+// const firstWithdrawal = movements.find(mov => mov < 0);
 
-console.log(movements);
-console.log(firstWithdrawal);
+// console.log(movements);
+// console.log(firstWithdrawal);
 
 /* 
 Differences between find() and filter():
