@@ -142,7 +142,6 @@ btnLogin.addEventListener('click', function (e) {
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
   // currentAccount?.pin => first will check if currentAccount exist AND, after that, check the pin
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and welcome message
@@ -187,4 +186,28 @@ btnTransfer.addEventListener('click', function (e) {
     receiverAcc.movements.push(amount);
     updateUI(currentAccount);
   }
+});
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Check credentials are correct
+
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    // Index will be the account to delete
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+    console.log(index);
+
+    // Delete account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
+  }
+  inputCloseUsername.value = inputClosePin.value = '';
 });
