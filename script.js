@@ -235,3 +235,12 @@ btnSort.addEventListener('click', function (e) {
   displayMovement(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
+
+labelBalance.addEventListener('click', function () {
+  // Use Array.from to create an array from the result of the querySelector (nodelist)
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
+  );
+  console.log(movementsUI);
+});
