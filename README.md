@@ -49,7 +49,3 @@ No compilation or build tooling is required.
 1. Open `index.html` in your web browser.
 2. Enter one of the demo usernames (e.g., `js`) and PIN (`1111`) into the top navigation bar and click the login arrow button.
 3. Once logged in, execute transfers, request loans, sort transactions, or close the account.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
