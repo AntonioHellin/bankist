@@ -1,4 +1,4 @@
-# bankist-banking-app
+# bankist
 
 A minimalist client-side digital banking web application simulating user authentication, real-time account balances, money transfers, loan requests, transaction sorting, and automatic logout timers.
 
