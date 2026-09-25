@@ -4,7 +4,7 @@ A minimalist client-side digital banking web application simulating user authent
 
 ## Project Overview
 
-`bankist-banking-app` provides an interactive mock banking portal implemented using vanilla JavaScript. The application demonstrates complex array transformations (`map`, `filter`, `reduce`), formatted currency and date calculations, transaction history rendering, and simulated banking workflows within a single responsive web interface.
+`bankist` provides an interactive mock banking portal implemented using vanilla JavaScript. The application demonstrates complex array transformations (`map`, `filter`, `reduce`), formatted currency and date calculations, transaction history rendering, and simulated banking workflows within a single responsive web interface.
 
 ## Features
 
